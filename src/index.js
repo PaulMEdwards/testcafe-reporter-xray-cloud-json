@@ -1,5 +1,7 @@
+const envExamplePath = require('path').resolve(__dirname, '..', '.env.example');
 require('dotenv-safe').config({
     allowEmptyValues: true,
+    example:          envExamplePath
 });
 const fs = require('fs');
 const axios = require('axios');
@@ -11,7 +13,9 @@ let DEBUG = false;
 
 function getEnv (key, _default) {
     const v = process.env[key];
-    if (v !== '') {
+    if (DEBUG === true) console.log(`Getting env var '${key}'='${v}'`);
+
+    if (v !== '' && typeof v !== 'undefined') {
         if (DEBUG === true) console.log(`Found env var '${key}'='${v}'`);
 
         if (v === 'true' || v === 'false') {

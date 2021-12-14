@@ -1,6 +1,6 @@
 {
   "name": "testcafe-reporter-xray-cloud-json",
-  "version": "0.7.2",
+  "version": "0.7.3",
   "description": "xray-cloud-json TestCafe reporter plugin.",
   "repository": "https://github.com/PaulMEdwards/testcafe-reporter-xray-cloud-json",
   "homepage": "https://github.com/PaulMEdwards/testcafe-reporter-xray-cloud-json#readme",
@@ -14,7 +14,8 @@
   },
   "main": "lib/index",
   "files": [
-    "lib"
+    "lib",
+    ".env.example"
   ],
   "scripts": {
     "build": "gulp build",
